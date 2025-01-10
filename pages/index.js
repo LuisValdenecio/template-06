@@ -18,14 +18,42 @@ export default function Home() {
       </Head>
       <Navbar />
       <Hero />
-      <LogoGrid />
-      <CenteredCTAText />
-      <CTA />
-      <Features />
-      <Stats />
-      <FAQs />
-      <FooterCTA />
-      <Footer />
+      {
+        process.env.NEXT_PUBLIC_LOGO_SECTION_SHOW === "1" && (
+          <LogoGrid />
+        )
+      }
+      {/*<CenteredCTAText />*/}
+      {
+        process.env.NEXT_PUBLIC_CTA_SECTION_SHOW === "1" && (
+          <CTA />
+        )
+      }
+      {
+        process.env.NEXT_PUBLIC_FEATURES_SECTION_SHOW === "1" && (
+          <Features />
+        )
+      }
+      {
+        process.env.NEXT_PUBLIC_STATS_SECTION_SHOW === "1" && (
+          <Stats />
+        ) 
+      }
+      {
+        process.env.NEXT_PUBLIC_FAQ_SHOW === "1" && (
+          <FAQs />
+        )
+      }
+      {
+        process.env.NEXT_PUBLIC_CTA_FOOTER_SHOW === "1" && (
+          <FooterCTA />
+        )
+      }
+      {
+        process.env.NEXT_PUBLIC_FOOTER_SHOW === "1" && (
+          <Footer />
+        )
+      }
     </>
   );
 }

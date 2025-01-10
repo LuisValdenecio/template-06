@@ -2,21 +2,21 @@ import SectionWrapper from "../../SectionWrapper"
 
 const stats = [
     {
-        data: "95K+",
-        desc: "Active websites around the world."
+        data: process.env.NEXT_PUBLIC_STATS_SECTION_DATA01,
+        desc: process.env.NEXT_PUBLIC_STATS_SECTION_DATA01_DESCRIPTION
     },
     {
-        data: "120M+",
-        desc: "API requests per day, and 6,000 requests a second."
+        data: process.env.NEXT_PUBLIC_STATS_SECTION_DATA02,
+        desc: process.env.NEXT_PUBLIC_STATS_SECTION_DATA02_DESCRIPTION
     },
     {
-        data: "25B+",
-        desc: "Tracked pageviews per month."
+        data: process.env.NEXT_PUBLIC_STATS_SECTION_DATA03,
+        desc: process.env.NEXT_PUBLIC_STATS_SECTION_DATA03_DESCRIPTION
     },
     {
-        data: "70%",
-        desc: "most people are using split in their website."
-    },
+        data: process.env.NEXT_PUBLIC_STATS_SECTION_DATA04,
+        desc: process.env.NEXT_PUBLIC_STATS_SECTION_DATA01_DESCRIPTION
+    },    
 ]
 
 const Stats = () => (
@@ -24,10 +24,10 @@ const Stats = () => (
         <div className="custom-screen text-gray-600">
             <div className="max-w-xl xl:mx-auto xl:text-center">
                 <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                    Get your site to the top of Google
+                    {process.env.NEXT_PUBLIC_STATS_SECTION_TITLE}
                 </h3>
                 <p className="mt-3">
-                    We distribute your visitors to your site across different geographical locations.
+                    {process.env.NEXT_PUBLIC_STATS_SECTION_DESCRIPTION}
                 </p>
             </div>
             <div className="mt-12">
